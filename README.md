@@ -1,6 +1,6 @@
 # tl2-tp1-2024-SanBarrio
 
-## Punto 2:
+## Punto 2a:
 
 ### ¿Cual de estas relaciones considera que se realiza por composición y cual por agregación? 
 
