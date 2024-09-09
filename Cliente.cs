@@ -6,15 +6,9 @@ class Cliente
     private string? datosReferenciaDireccion;
 
 
-    public Cliente(string nomb, string dir, string tel, string dat)
-    {
-        nombre = nomb;
-        direccion = dir;
-        telefono = tel;
-        datosReferenciaDireccion = dat;
-    }
-    public string Nombre { get => nombre; }
-    public string Direccion { get => direccion; }
-    public string Telefono { get => telefono; }
-    public string DatosReferenciaDireccion { get => datosReferenciaDireccion; }
+    
+     public string Nombre { get => nombre; set => nombre = value; }
+    public string Direccion { get => direccion; set => direccion = value; }
+    public string Telefono { get => telefono; set => telefono = value; }
+    public string DatosReferenciaDireccion { get => datosReferenciaDireccion; set => datosReferenciaDireccion = value; }
 }

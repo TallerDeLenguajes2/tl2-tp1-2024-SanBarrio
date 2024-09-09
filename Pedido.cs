@@ -1,24 +1,42 @@
-class Pedido {
+class Pedido
+{
     private int numero;
     private string observacion;
     private Cliente cliente;
     private Estado estado;
-    
 
-    public int Numero { get => numero; }
-    public string Observacion { get => observacion; }
-    public Cliente Cliente { get => cliente; }
-    public Estado Estado { get => estado; set => estado = value; }
+     public Pedido(string nom, string dir, string tel, string datosRef, string obs)
+    {
+        
+        this.observacion = obs;
+        cliente = new Cliente()
+        {
+            Nombre = nom,
+            Direccion = dir,
+            Telefono = tel,
+            DatosReferenciaDireccion = datosRef
+        };
+        estado = Estado.Pendiente;
 
-    public string VerDireccionCliente() {
-        return Cliente.Direccion;
     }
-    public string VerDatosCliente() {
-        return Cliente.DatosReferenciaDireccion;
+
+
+
+
+
+
+    public string VerDatosCliente()
+    {
+        return $"Nombre: {cliente.Nombre} | Direccion: {cliente.Direccion} | Telefono: {cliente.Telefono} | Referencia: {cliente.DatosReferenciaDireccion}";
+    }
+    public string VerDireccionCliente()
+    {
+        return cliente.DatosReferenciaDireccion;
     }
 }
 
-public enum Estado {
+public enum Estado
+{
     Entregado,
     Pendiente
 }

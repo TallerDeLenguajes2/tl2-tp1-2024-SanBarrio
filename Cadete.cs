@@ -1,21 +1,22 @@
 class Cadete {
-    private string id;
+    private int id;
     private string nombre;
     private string direccion;
     private string telefono;
-    private List<Pedido> listadoDePedidos = new();
+    private List<Pedido> listadoDePedidos;
 
-    public Cadete(string id, string nom, string dir, string tel) {
+    public Cadete(int id, string nom, string dir, string tel) {
         this.id = id;
-        nombre = nom;
-        direccion = dir;
-        telefono = tel;
+        this.nombre = nom;
+        this.direccion = dir;
+        this.telefono = tel;
+        listadoDePedidos = new List<Pedido>();
     }
 
-    public string Id { get => id; }
-    public string Nombre { get => nombre; }
-    public string Direccion { get => direccion; }
-    public string Telefono { get => telefono; }
-    internal List<Pedido> ListadoDePedidos { get => listadoDePedidos; }
+    public string Nombre { get => nombre; set => nombre = value; }
+    public string Direccion { get => direccion; set => direccion = value; }
+    public string Telefono { get => telefono; set => telefono = value; }
+    public int Id { get => id; set => id = value; }
+    internal List<Pedido> ListadoPedidos { get => listadoDePedidos; set => listadoDePedidos = value; }
 
 }
